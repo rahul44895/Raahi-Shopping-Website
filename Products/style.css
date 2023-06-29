@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Babylonica&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #092525;
+  /* background: #f2a222; */
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e19720;
+}
+body {
+  overflow-x: hidden;
+}
+@keyframes header_anime {
+  from {
+    /* background-color: red; */
+    top: -100px;
+  }
+  to {
+    /* background-color: yellow; */
+    top: 0;
+  }
+}
+.header_bar {
+  /* background-color: #f2a222; */
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  top: 0px;
+  padding: 2em 0 1em 0;
+  background-color: white;
+  position: relative;
+  align-items: center;
+  box-shadow: black 3px 1px 14px 2px;
+  z-index: 10;
+}
+.logo_img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  /* background: url(https://bit.ly/3SbDKTn) no-repeat; */
+  /* background: url(./images/icon.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 50px;
+  width: 50px; */
+  cursor: pointer;
+}
+.hop {
+  display: flex;
+  justify-content: center;
+}
+.header_options {
+  padding: 0em 1em 1em 1em;
+  text-align: center;
+  font-weight: bolder;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.header_options:hover {
+  color: #092525;
+  cursor: pointer;
+}
+.header_options::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 2px;
+  background-color: #092525;
+  transform: scale(0.2);
+  transition: all 0.2s ease-in-out;
+}
+.header_options:hover::before {
+  transform: scale(1);
+}
+.search_area,
+.menu_icon {
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  padding: 1em;
+  box-sizing: border-box;
+}
+.search_area input {
+  width: 0px;
+  transition: all 0.3s;
+}
+.search_area i:hover {
+  cursor: pointer;
+}
+.search_area:hover input {
+  width: 200px;
+}
+input,
+input:focus {
+  border: none;
+  outline: none;
+  width: 200px;
+  font-size: medium;
+  border-bottom: 1px solid grey;
+}
+.menu_icon {
+  display: none;
+  width: 60px;
+  height: 100%;
+}
+@media only screen and (max-width: 700px) {
+  .header_bar {
+    padding: 1em 0;
+  }
+  .logo_img {
+    position: static;
+  }
+  .hop {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2em 0;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    background-color: white;
+    transform: translateX(-400px);
+    visibility: hidden;
+  }
+
+  .search_area:hover input {
+    width: 100px;
+  }
+  .menu_icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+  }
+}
+.category_section {
+  position: absolute;
+  top: 46px;
+  right: 5px;
+  transform: translateX(1000px);
+  transition: all 0.3s linear;
+  background-color: white;
+  width: 800px;
+  padding: 1em;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 9px black;
+}
+.category_section h1 {
+  font-size: 1.5em;
+}
+.search_area:hover .category_section {
+  transform: translateX(0px);
+  display: inline-block;
+}
+.sub_category {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2em;
+}
+.sub_category p {
+  font-weight: bolder;
+}
+.sub_category_head div {
+  line-height: 30px;
+}
+.sub_category_head div span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.cat_sideBar {
+  width: 200px;
+  background: rgb(245,245,245);
+  height: 80vh;
+  padding-top: 4em;
+  margin-left: 10px;
+}
+.cat_sideBar ul li{
+  margin-left: 10px;
+}
+.cat_sideBar input{
+  width: 20px;
+}
+
+.product_section {
+  padding: 2em;
+}
+.product_card_container {
+  display: flex;
+  padding: 1em;
+  gap:10px;
+  justify-content: center;
+}
+.product_card {
+  background-color: #fcfafa;
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+}
+.product_image{
+
+  height: 300px;
+  transition: all 0.5s ease-in-out;
+}
+.product_image_1 {
+  background: url(https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-002-001_a_3_540x.jpg?v=1570516510);
+  background-size: 100%;
+  background-position: center;
+}
+.product_image_2 {
+  background: url(https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-025-006_a_2_900x.jpg?v=1570516415);
+  background-size: 100%;
+  background-position: center;
+}
+.product_image_3 {
+  background: url(https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-007-020_a_1_540x.jpg?v=1570516420);
+  background-size: 100%;
+  background-position: center;
+}
+.product_image_4 {
+  background: url(https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-014-006_a_2_360x.jpg?v=1570516485);
+  background-size: 100%;
+  background-position: center;
+}
+.product_image_5 {
+  background: url(https://cdn.shopify.com/s/files/1/0030/9759/1872/products/83_900x.png?v=1610968680);
+  background-size: 100%;
+  background-position: center;
+}
+.product_image_6 {
+  background: url(https://tse4.mm.bing.net/th?id=OIP.MRddyn6NT3Z4awk2uwao0AHaE4&pid=Api&P=0);
+  background-size: 100%;
+  background-position: center;
+}
+.product_image_7 {
+  background: url(https://cdn.shopify.com/s/files/1/0030/9759/1872/products/nrityaki-wall-decor-hanging-in-recycled-wood-11-inch-hand-painted-multicoloured-el-002-247_1_900x.jpg?v=1658743938);
+  background-size: 100%;
+  background-position: center;
+}
+.product_image_8 {
+  background: url(https://tse1.mm.bing.net/th?id=OIP.TCS0doupPjxUsv5JxvOx5wHaHa&pid=Api&P=0);
+  background-size: 100%;
+  background-position: center;
+}
+.product_image_9 {
+  background: url(https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-007-046_a_540x.jpg?v=1570516085);
+  background-size: 100%;
+  background-position: center;
+}
+.product_image_10 {
+  background: url(https://tse4.mm.bing.net/th?id=OIP.RdLSw0PyVnlJrVRna7EIMAHaE8&pid=Api&P=0);
+  background-size: 100%;
+  background-position: center;
+}
+.product_image_11 {
+  background: url(https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-007-051_A_6f551e8a-5c6a-4708-ad64-9ff1f3e52312_900x.jpg?v=1598088076);
+  background-size: 100%;
+  background-position: center;
+}
+.product_image_12 {
+  background: url(https://cdn.shopify.com/s/files/1/0030/9759/1872/products/el-007-038_a_540x.jpg?v=1570516205);
+  background-size: 100%;
+  background-position: center;
+}
+.product_card:hover .product_image{
+  background-size: 110%;
+}
+.product_name {
+  padding: 1em;
+  height: 115px;
+}
+.product_card button {
+  background-color: black;
+  padding: 1em;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.product_card:hover button{
+  background-color: white;
+  color: black;
+}
+.footer {
+  height: 501px;
+  background: #092525;
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+.footer_parent {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2em;
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+}
+.footer_child .footer_child_head {
+  position: relative;
+  padding-left: 10px;
+}
+.footer_child .footer_child_head::before {
+  content: "";
+  background: pink;
+  height: 18px;
+  width: 5px;
+  position: absolute;
+  top: 6px;
+  left: 0px;
+}
+.footer_content {
+  font-size: 15px;
+  padding-top: 2em;
+}
+.footer_content p {
+  padding: 1em;
+  cursor: pointer;
+  position: relative;
+}
+.footer_content p::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  left: 0;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: all 0.2s ease-in-out;
+}
+.footer_content p:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
+.footer_content p span {
+  font-size: 14px;
+}

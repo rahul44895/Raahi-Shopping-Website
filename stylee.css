@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Babylonica&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 48;
+}
+* {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.card img {
+  height: 100%;
+  transition: transform 5s;
+  width: 100%;
+}
+.card img:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.card_container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card {
+  overflow: hidden;
+  width: 485px;
+  height: 370px;
+  border-radius: 5px;
+  border: 1px solid #e2dcdc;
+  margin-bottom: 10px;
+}
+.card .overlay {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-position: center;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 29px;
+  font-family: "Poppins", sans-serif;
+}
+.overlay-image-1 {
+  background: url(https://i.pinimg.com/564x/99/3f/8f/993f8f6e6a6a829667be59037ed06530.jpg);
+  background-size: 100%;
+  transition: all 1s linear;
+}
+
+.overlay-image-2 {
+  background: url(https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-005-749_A_1_540x.jpg?v=1598077323);
+  background-size: 100%;
+  transition: all 1s linear;
+}
+.overlay-image-3 {
+  background: url(https://cdn.shopify.com/s/files/1/0155/8131/products/1_d3d13f25-229d-4970-a98e-99607b953d7a_480x.jpg?v=1675331712);
+  background-size: 100%;
+  transition: all 1s linear;
+}
+.overlay-image-4 {
+  background: url(https://handmadebeauty.in/wp-content/uploads/2021/04/Hmb0005-Hibiscus-hair-mask-570x670.jpg);
+  background-size: 100%;
+  transition: all 1s linear;
+}
+.overlay-image-5 {
+  background: url(https://www.dunejewelry.com/blog/wp-content/uploads/2017/08/dune-jewelry-teardrop-earrings-DSC_0873.jpg);
+  background-size: 100%;
+  transition: all 1s linear;
+}
+.overlay-image-6 {
+  background: url(https://i.etsystatic.com/37175303/r/il/f01568/4355619668/il_794xN.4355619668_egwz.jpg);
+  background-size: 120%;
+  transition: all 1s linear;
+}
+.overlay-image-7 {
+  background: url(https://i.etsystatic.com/17634941/r/il/b492be/4292661563/il_794xN.4292661563_ebkc.jpg);
+  background-size: 100%;
+  transition: all 1s linear;
+}
+.overlay-image-8 {
+  background: url(https://cdn.shopaccino.com/ajoobaa/categories/crochet-baby-frocks-621044_s.jpg?v=447);
+  background-size: 90%;
+  transition: all 1s linear;
+}
+.overlay-image-9 {
+  background: url(https://tse1.mm.bing.net/th?id=OIP.d0j7JFpYDz0VP7fNOEqHkwHaFY&pid=Api&P=0);
+  background-size: 110%;
+  transition: all 1s linear;
+}
+.overlay-image-10 {
+  background: url(https://cdn.shopify.com/s/files/1/0030/9759/1872/products/EL-008-216_A_540x.jpg?v=1577790935);
+  background-size: 100%;
+  transition: all 1s linear;
+}
+.overlay-image-11 {
+  background: url(https://tse3.mm.bing.net/th?id=OIP.C0PlLIuBZlD3AoklrY44awHaE6&pid=Api&P=0);
+  background-size: 115%;
+  transition: all 1s linear;
+}
+.overlay-image-12 {
+  background: url(https://cdn.shopify.com/s/files/1/0030/9759/1872/products/bustling-bunnies-handpainted-garden-decorative-showpieces-in-iron-set-of-2-6-inch_1_540x.jpg?v=1653567248);
+  background-size: 100%;
+  transition: all 1s linear;
+}
+.overlay-image-1:hover,
+.overlay-image-2:hover,
+.overlay-image-3:hover,
+.overlay-image-4:hover,
+.overlay-image-5:hover,
+.overlay-image-6:hover,
+.overlay-image-7:hover,
+.overlay-image-8:hover,
+.overlay-image-9:hover,
+.overlay-image-10:hover,
+.overlay-image-11:hover,
+.overlay-image-12:hover {
+  background-size: 150%;
+  cursor: pointer;
+}
+.overlaytext {
+  background: rgb(245 245 245);
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-300px);
+  transition: all 0.3s;
+  width: 50%;
+  text-align: center;
+}
+.card .overlay:hover .overlaytext {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.cardtext {
+  color: white;
+  position: relative;
+  transition: all 0.3s;
+  font-size: 40px;
+}
+.overlaytext {
+  padding: 1em;
+}
+.shop {
+  background: #092525;
+  text-align: center;
+  border-radius: 101px;
+  padding: 8px;
+  font-size: 17px;
+  position: relative;
+  top: 60px;
+  color: white;
+}
+.overlay:hover .cardtext {
+  opacity: 0;
+}
+.shop:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.harlow {
+  font-family: "Babylonica", cursive;
+  color: #092525;
+  font-size: 100px;
+  text-align: center;
+}
+.love {
+  width: 365px;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #fcfafa;
+  border: 1px solid #d8d8d814;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.love:hover {
+  border: none;
+  box-shadow: 0px 3px 8px 0px #d4cfcf;
+  background-color: white;
+}
+.love_container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em;
+  margin-top: 65px;
+}
+.our {
+  height: 80px;
+  padding: 0em 2em;
+  text-align: center;
+  font-size: 16px;
+  color: #9b9696;
+}
+.find {
+  font-size: 20px;
+  text-align: center;
+}
+.heart_container {
+  position: absolute;
+  top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 235px;
+}
+.heart {
+  text-align: center;
+}
+.heart span {
+  font-size: 50px;
+  transition: all 0.2s;
+  overflow: hidden;
+  color: pink;
+}
+.love:hover .material-symbols-outlined {
+  font-size: 60px;
+}
+.be {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  margin-bottom: 52px;
+}
+.be h2 {
+  font-weight: 100;
+}
+/* .be h2::before{
+    content: url(assets/images/title-decor-left.png);
+}
+.be h2::after{
+    content: url(assets/images/title-decor-right.png);
+} */
+.be h6 {
+  color: darkgray;
+  margin: 0px;
+  font-size: 20px;
+  font-weight: 100;
+}
+.footer {
+  height: 501px;
+  background: #092525;
+  margin-top: 35px;
+}
+.footer_parent {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2em;
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+}
+.footer_child .footer_child_head {
+  position: relative;
+  padding-left: 10px;
+}
+.footer_child .footer_child_head::before {
+  content: "";
+  background: pink;
+  height: 18px;
+  width: 5px;
+  position: absolute;
+  top: 6px;
+  left: 0px;
+}
+.footer_content {
+  font-size: 15px;
+  padding-top: 2em;
+}
+.footer_content p {
+  padding: 1em;
+  cursor: pointer;
+  position: relative;
+}
+.footer_content p::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  left: 0;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: all 0.2s ease-in-out;
+}
+.footer_content p:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
+.footer_content p span {
+  font-size: 14px;
+}
+.blog_section {
+  background: url(https://images.yourstory.com/cs/21/98e25df018b511e988ceff9061f4e5e7/Imagephmr1573470708210jpg?w=752&fm=auto&ar=2:1&mode=crop&crop=faces);
+  background-size: cover;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  /* z-index: 10; */
+  margin: 10px 0px;
+  padding-top: 4em;
+}
+
+.blog_section::before {
+  background: rgba(0, 0, 0, 0.297);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  z-index: -1;
+}
+.profile {
+  float: left;
+  height: 300px;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s linear;
+}
+.profile:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.profile .img {
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  background: url(https://images.yourstory.com/cs/21/98e25df018b511e988ceff9061f4e5e7/Imagephmr1573470708210jpg?w=752&fm=auto&ar=2:1&mode=crop&crop=faces);
+  background-size: cover;
+  background-position: center;
+  background-position-x: 2px;
+}
+.profile .name {
+  font-weight: 600;
+}
+.blog_section .content {
+  padding: 2em;
+}
+.blog_section .content h1 {
+  color: white;
+  font-family: "Merriweather Sans", sans-serif;
+}
+.blog_section .content p {
+  padding: 1em;
+}
+.signup_area {
+  text-align: center;
+  background-color: rgb(255 255 255);
+  padding: 1em;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.signin_input {
+  padding: 0.5em;
+  width: 500px;
+  box-sizing: border-box;
+  border: none;
+  border: 2px solid #092525;
+}
+.signin_input:focus {
+  width: 500px;
+}
+.signin_input_btn {
+  padding: 1em;
+  transition: all 0.2s ease-in-out;
+  background-color: black;
+  color: white;
+  width: 10em;
+  margin-left: 10px;
+  font-weight: 500;
+}
+.signin_input_btn:hover {
+  font-weight: 500;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.product_section {
+  padding: 2em;
+}
+.product_card_container {
+  display: flex;
+  padding: 1em;
+  gap: 10px;
+  justify-content: center;
+}
+.product_card {
+  background-color: #fcfafa;
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+}
+.product_image {
+  height: 300px;
+  transition: all 0.5s ease-in-out;
+}
+.product_image_1 {
+  background: url(https://tse1.mm.bing.net/th?id=OIP.vdaAmUlNd1BXwIrLzNBhBAHaHa&pid=Api&P=0);
+  background-size: 100%;
+  background-position: center;
+}
+.product_image_2 {
+  background: url(https://tse3.mm.bing.net/th?id=OIP.m_Wqah9V5qGaA6C82Zrq6wAAAA&pid=Api&P=0);
+  background-size: 100%;
+  background-position: center;
+}
+.product_image_3 {
+  background: url(https://tse2.mm.bing.net/th?id=OIP.2ARr4FpNCpv3CMn1xdwoJgAAAA&pid=Api&P=0);
+  background-size: 100%;
+  background-position: center;
+}
+.product_image_4 {
+  background: url(https://tse1.mm.bing.net/th?id=OIP.7LVwo2f04ADcja5_romp3gHaHa&pid=Api&P=0);
+  background-size: 100%;
+  background-position: center;
+}
+.product_card:hover .product_image {
+  background-size: 110%;
+}
+.product_name {
+  padding: 1em;
+}
+.product_card button {
+  background-color: black;
+  padding: 1em;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.product_card:hover button {
+  background-color: white;
+  color: black;
+}
+
+.what_child {
+  position: relative;
+  height: 276px;
+  width: 400px;
+  background: white;
+  top: 83px;
+  left: 100px;
+  overflow: hidden;
+}
+.bee {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 31px;
+  font-weight: 600;
+
+  margin-left: 10px;
+}
+.get {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.learn {
+  height: 45px;
+  width: 152px;
+  background: black;
+  text-align: center;
+  margin-top: 27px;
+  margin-left: 119px;
+}
+.more {
+  text-align: center;
+  margin-top: 13px;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  font-family: "Merriweather", serif;
+}
+.what {
+  height: 450px;
+  width: 100%;
+  background: url(https://i0.wp.com/www.jaipurstuff.com/wp-content/uploads/2019/10/Handicrafts-of-Jaipur.jpg?fit=956%2C535&ssl=1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 40px;
+}
+
+.our_mission {
+  display: flex;
+
+  margin-top: 100px;
+}
+.mission {
+  background: url(https://thumbs.dreamstime.com/b/kolkata-west-bengal-india-december-rd-unidentified-woman-preparing-jute-bags-artworks-handicraft-handicraft-fair-kolkata-107153045.jpg);
+  height: 550px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 4719px;
+  margin-left: 35px;
+}
+.mission_text {
+  margin: 40px;
+  text-align: center;
+  margin-top: 130px;
+}
+.made {
+  display: flex;
+  margin-top: 60px;
+  /* position: absolute;  */
+}
+.made_text {
+  margin-top: 165px;
+  position: relative;
+  left: 60px;
+}
+.made_img {
+  background: url(https://images.unsplash.com/photo-1463592177119-bab2a00f3ccb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80);
+  height: 500px;
+  width: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 205px;
+}
